@@ -14,7 +14,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.subsystems.ExampleSubsystem;
-import frc.robot.subsystems.TalonSubsystem;
+import frc.robot.subsystems.MotorSubsystem;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -26,7 +26,7 @@ import frc.robot.subsystems.TalonSubsystem;
 public class Robot extends TimedRobot {
   public static ExampleSubsystem m_subsystem = new ExampleSubsystem();
 
-  public static TalonSubsystem talon = new TalonSubsystem();
+  public static MotorSubsystem motor = new MotorSubsystem();
 
   public static OI m_oi;
 

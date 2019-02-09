@@ -7,22 +7,36 @@
 
 package frc.robot.subsystems;
 
+import edu.wpi.first.wpilibj.PWMVictorSPX;
 import edu.wpi.first.wpilibj.command.Subsystem;
-import edu.wpi.first.wpilibj.util.WPILibVersion;
-import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+import frc.robot.RobotMap;
 
 /**
  * An example subsystem.  You can replace me with your own Subsystem.
  */
-public class TalonSubsystem extends Subsystem {
+public class MotorSubsystem extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
-  WPI_TalonSRX
+  PWMVictorSPX victor = new PWMVictorSPX(RobotMap.MOTOR_VICTOR);
 
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand());
+
   }
+
+  public void enable(){
+
+    victor.set(0.25);
+
+  }
+
+  public void disable(){
+
+    victor.set(0);
+
+  }
+
 }
