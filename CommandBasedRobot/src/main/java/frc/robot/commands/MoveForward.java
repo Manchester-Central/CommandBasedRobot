@@ -11,12 +11,12 @@ import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
 /**  
- * An example command.  You can replace me with your own command.
+ * Moves Motor Forward.
  */
-public class ExampleCommand extends Command {
-  public ExampleCommand() {
+public class MoveForward extends Command {
+  public MoveForward() {
     // Use requires() here to declare subsystem dependencies
-    requires(Robot.m_subsystem);
+    requires(Robot.talon);
   }
 
   // Called just before this Command runs the first time
