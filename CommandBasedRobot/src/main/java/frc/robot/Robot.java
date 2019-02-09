@@ -13,8 +13,11 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.commands.ExampleCommand;
+import frc.robot.commands.LogSmartDashboardData;
+import frc.robot.subsystems.DriveSubsystem;
 import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.subsystems.MotorSubsystem;
+import frc.robot.subsystems.SmartDashboardSubsystem;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -25,8 +28,10 @@ import frc.robot.subsystems.MotorSubsystem;
  */
 public class Robot extends TimedRobot {
   public static ExampleSubsystem m_subsystem = new ExampleSubsystem();
-
   public static MotorSubsystem motor = new MotorSubsystem();
+  public static DriveSubsystem drive = new DriveSubsystem();
+  public static SmartDashboardSubsystem smart = new SmartDashboardSubsystem();
+
 
   public static OI m_oi;
 
@@ -55,6 +60,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotPeriodic() {
+  
   }
 
   /**

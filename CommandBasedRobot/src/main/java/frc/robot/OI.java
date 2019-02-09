@@ -8,6 +8,9 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
+import frc.robot.commandGroups.AutoDrive;
+import frc.robot.commands.DriveDistance;
+import frc.robot.commands.WaitTime;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.commands.MoveForward;
 
@@ -29,9 +32,19 @@ public class OI {
   public OI () {
 
     driver.getLeftXButton().whileHeld(new MoveForward());
+    driver.getRightBumperButton().whileHeld(new WaitTime(5));
+    driver.getLeftBumperButton().whenPressed(new DriveDistance(24));
+    driver.getUpYButton().whenPressed(new AutoDrive());
 
   }
 
+  public Controller getDriverController () {
+    return driver;
+  }
+
+  public Controller getOperatorController() {
+    return operator;
+  }
   // There are a few additional built in buttons you can use. Additionally,
   // by subclassing Button you can create custom triggers and bind those to
   // commands the same as any other Button.

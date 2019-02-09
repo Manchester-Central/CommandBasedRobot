@@ -26,4 +26,15 @@ public class RobotMap {
 
   public static final int MOTOR_VICTOR = 6;
 
+  public static final int LEFT_BACK_VICTOR = 0;
+	public static final int LEFT_MID_VICTOR = 1;
+	public static final int LEFT_FRONT_VICTOR = 2;
+	
+	public static final int RIGHT_BACK_VICTOR = 3;
+	public static final int RIGHT_MID_VICTOR = 4;
+	public static final int RIGHT_FRONT_VICTOR = 5;
+	
+	
+	public static final int LEFT_CAN_TALON = 4;
+	public static final int RIGHT_CAN_TALON = 3;
 }
